@@ -1,31 +1,31 @@
 const users = [
 	{
-		name: "Erik",
-		age: 28,
-		email: "erik@academlo.com",
+		name: "Daniel",
+		age: 25,
+		email: "daniel@academlo.com",
 		social: [
-			{ name: "facebook", url: "facebook/erik"},
-			{ name: "twitter", url: "twitter/erik"}
+			{ name: "facebook", url: "facebook/daniel"},
+			{ name: "twitter", url: "twitter/daniel"}
 		],
 		gender: "Male"
 	},
 	{
 		name: "Cesar",
 		age: 28,
-		email: "erik@yahoo.com",
+		email: "cesar@yahoo.com",
 		social: [
-			{ name: "facebook", url: "facebook/erik"},
-			{ name: "twitter", url: "twitter/erik"}
+			{ name: "facebook", url: "facebook/cesar"},
+			{ name: "twitter", url: "twitter/cesar"}
 		],
 		gender: "Male"
 	},
 	{
 		name: "Juan",
-		age: 28,
-		email: "erik@gmail.com",
+		age: 54,
+		email: "juan@gmail.com",
 		social: [
-			{ name: "facebook", url: "facebook/erik"},
-			{ name: "twitter", url: "twitter/erik"}
+			{ name: "facebook", url: "facebook/juan"},
+			{ name: "twitter", url: "twitter/juan"}
 		],
 		gender: "Male"
 	},
@@ -40,22 +40,22 @@ const users = [
 		gender: "Male"
 	},
 	{
-		name: "Erik",
-		age: 28,
-		email: "erik@hotmail.com",
+		name: "David",
+		age: 15,
+		email: "david@hotmail.com",
 		social: [
-			{ name: "facebook", url: "facebook/erik"},
-			{ name: "twitter", url: "twitter/erik"}
+			{ name: "facebook", url: "facebook/david"},
+			{ name: "twitter", url: "twitter/david"}
 		],
 		gender: "Male"
 	},
 	{
-		name: "Erik",
-		age: 28,
-		email: "erik@gmail.com",
+		name: "Manfredo",
+		age: 23,
+		email: "manfredo@gmail.com",
 		social: [
-			{ name: "facebook", url: "facebook/erik"},
-			{ name: "twitter", url: "twitter/erik"}
+			{ name: "facebook", url: "facebook/mafredo"},
+			{ name: "twitter", url: "twitter/manfredo"}
 		],
 		gender: "Male"
 	}
@@ -119,74 +119,16 @@ nuevaFila.appendChild(columna5);
 let tbody = document.createElement("tbody");
 tabla.appendChild(tbody);
 
-//Le agregamos su respectiva informacion al cuerpo de la tabla
-//creamos su variable de columnas
-// let nuevaFilaTBody = document.createElement("tr");
-
-//Vaciamos la informacion en la tabla
-// users.forEach((element,index, array) => {
-// 	let nuevaFilaTBody = document.createElement("tr");
-// 	// console.log(element.name);
-// 	//Creamos una fila para los datos
-// 	tbody.appendChild(nuevaFilaTBody);
-// 	//Ahora manejamos las columnas
-// 	users.forEach((element,index, array) => {
-// 		columna = document.createElement("td");
-// 		columna.innerText = element.name;
-// 		nuevaFilaTBody.appendChild(columna);
-// 	});	
-// 	let i =0;
-// 	// let variable = document.createElement("tr");
-// 	//Creamos la estructura del tbody con la informacion
-// 	// columna.innerText = element.name;
-// 	// nuevaFilaTBody.appendChild(columna);
-// });
-
-// for (let i = 0; i < users.length; i++) {
-// 	let nuevaFilaTBody = document.createElement("tr");
-// 	// console.log(element.name);
-// 	//Creamos una fila para los datos
-// 	tbody.appendChild(nuevaFilaTBody);
-// 	//Ahora manejamos las columnas
-// 	for (let j = 0; j < users.length; j++) {
-// 		//Genera la columna
-// 		users[i] = document.createElement("td");
-// 		// columna2 = document.createElement("td");
-// 		// columna3 = document.createElement("td");
-// 		// columna4 = document.createElement("td");
-// 		// columna5 = document.createElement("td");
-// 		//Escribimos la informacion de la columna
-// 		users[i].innerText = users[i].name;
-// 		users[i].innerText = users[i].age;
-// 		users[i].innerText = users[i].email;
-// 		columna4.innerText = users[i].social;
-// 		columna5.innerText = users[i].gender;
-// 		//Agregamos la columna
-// 	}
-// 	nuevaFilaTBody.appendChild(columna1);
-// 		nuevaFilaTBody.appendChild(columna2);
-// 		nuevaFilaTBody.appendChild(columna3);
-// 		nuevaFilaTBody.appendChild(columna4);
-// 		nuevaFilaTBody.appendChild(columna5);
-// }
-
 function createTable(usersList) {
-	// console.log(table);
 	// iteramos
 	for (var i = 0; i < usersList.length; i++) {
 		let userEmail = usersList[i].email;
 		if (userEmail.endsWith("@academlo.com")) {
-			// const element = usersList[i];
-			// console.log(element);
-			//Vamos a pintar en algun lugar la tabla
-			//le decimos que cree un elemnto
-			// let newRow = document.createElement("tr");
 			let nuevaFilaTBody = document.createElement("tr");
-			tbody.appendChild(nuevaFilaTBody); //HAsta aqui pinta solo los tr y lo podemos ver en la onsola
+			tbody.appendChild(nuevaFilaTBody); 
 
 			let userName = document.createElement("td");
-			userName.innerText = usersList[i].name; //creamos el elemento y le pusismos teto
-			//Se lo agregamos al newrow
+			userName.innerText = usersList[i].name;
 			nuevaFilaTBody.appendChild(userName);
 
 			let userEdad = document.createElement("td");
@@ -207,25 +149,6 @@ function createTable(usersList) {
 			}
 			userSocial.appendChild(ul);
 			nuevaFilaTBody.appendChild(userSocial);
-
-			// // let userSocial = document.createElement("td");
-			// let userSocial = document.createElement("td");
-			// let ul = document.createElement("lu");
-			
-			// for (var j = 0; j < (usersList[i].social).length; j++) {
-			// 	let li = document.createElement("li");
-				
-			// 	// console.log(usersList[i].social[j]);
-			// 	li.innerText = usersList[i].social[j];
-			// 	// nuevaFilaTBody.appendChild(userSocial);
-			// 	// li.appendChild(li)
-			// 	ul.appendChild(li);
-			// }
-			// // nuevaFilaTBody.appendChild(userSocial);
-			// userSocial.appendChild(ul);
-			// nuevaFilaTBody.appendChild(userSocial);
-			// // userSocial.innerText = usersList[i].social;
-			// // nuevaFilaTBody.appendChild(userSocial);
 
 			let userGender = document.createElement("td");
 			userGender.innerText = usersList[i].gender;
