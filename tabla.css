@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: #0A1D37;
+	font-size: 1.2rem;
+	font-family: Arial;
+	align-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+div {
+	max-width: 100%;
+	margin: 50px;
+}
+
+ul {
+	list-style: none;
+}
+
+
+table {
+   width: 100%;
+   border: 1px solid #000;
+   border-collapse: collapse;
+   box-shadow: 1px 1px 10px 1px gray;
+}
+
+th, td {
+   padding: 20px;
+   width: 25%;
+   text-align: center;
+   vertical-align: top;
+   border-top: 1px solid #0A1D37;
+   border-spacing: 0;
+}
+
+thead tr {
+	background-color: #FFBD9B;
+}
+
+tbody tr{
+	background-color: #FFEEDB; 
+}
